@@ -2,7 +2,6 @@
     <iframe width="640" height="390" 
     src="https://scratch.mit.edu/projects/{{ include.id }}/embed" 
     frameborder="0" allowfullscreen scrolling="no" id="{{ include.id }}"></iframe>
-    <button id="{{ include.id }}-button" class="fullscreen-button"><img src="https://github.com/Jumace/traumreise/raw/main/_includes/fullscreen.png"></button>
 </div>
 <style>
 .embed-container {
@@ -23,24 +22,4 @@
   height: 100%;
 }
 
-.fullscreen-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.fullscreen-button--fullscreen {
-    position: fixed;
-}
-
-.iframe--fullscreen {
-    position: fixed;
-}
-
 </style>
-<script>
-    document.getElementById("{{ include.id }}-button").addEventListener('click', (() => {
-        document.getElementById("{{ include.id }}").classList.toggle('iframe--fullscreen');
-        document.getElementById("{{ include.id }}-button").classList.toggle('fullscreen-button--fullscreen')
-    }));
-</script>
